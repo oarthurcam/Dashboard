@@ -20,23 +20,23 @@
   .badge{background:var(--card2);border:1px solid var(--line);padding:8px 16px;border-radius:10px;text-align:right}
   .badge .b1{font-size:12px;color:var(--muted)}
   .badge .b2{font-size:18px;font-weight:700;color:var(--acc2)}
-
+ 
   .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
   .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
   .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
   .kpi.a::before{background:var(--acc)} .kpi.b::before{background:var(--acc2)}
   .kpi.c::before{background:var(--good)} .kpi.d::before{background:var(--pur)}
   .kpi .lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-  .kpi .val{font-size:24px;font-weight:800;margin-top:8px}
+  .kpi .val{font-size:23px;font-weight:800;margin-top:8px}
   .kpi .note{font-size:11px;color:var(--muted);margin-top:6px}
-
+ 
   .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-bottom:16px}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
   .panel h2{font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:var(--acc);margin-bottom:14px;display:flex;align-items:center;gap:8px}
   .panel h2 .dot{width:9px;height:9px;border-radius:50%;background:var(--acc)}
   .panel.coord{border:1px solid var(--acc2);background:linear-gradient(150deg,#22214a,#1d2a48)}
   .panel.coord h2{color:var(--acc2)} .panel.coord h2 .dot{background:var(--acc2)}
-
+ 
   table{width:100%;border-collapse:collapse;font-size:13px}
   th{text-align:left;color:var(--muted);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.5px;padding:8px 10px;border-bottom:1px solid var(--line)}
   td{padding:10px;border-bottom:1px solid rgba(255,255,255,.05)}
@@ -49,15 +49,17 @@
   .chip.g{background:rgba(74,222,128,.16);color:var(--good)}
   .av{width:26px;height:26px;border-radius:50%;display:inline-grid;place-items:center;font-size:11px;font-weight:800;color:#13122a;margin-right:8px;vertical-align:middle}
   .prize{font-weight:800;color:var(--good)}
-
-  .canvasbox{position:relative;height:240px}
+  .prize2{font-weight:800;color:var(--acc2)}
+ 
   .barchart{display:flex;flex-direction:column;gap:16px;margin-top:6px}
   .brow{display:flex;align-items:center;gap:12px}
   .bname{flex:0 0 72px;font-size:13px;color:var(--txt)}
-  .btrack{flex:1;background:var(--bg2);border-radius:8px;height:30px;overflow:hidden}
-  .bfill{height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;min-width:90px}
+  .btrack{flex:1;background:var(--bg2);border-radius:8px;height:30px;overflow:hidden;position:relative}
+  .bfill{height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;min-width:70px}
   .bfill span{font-size:12px;font-weight:800;color:#13122a}
-
+  .bextra{position:absolute;top:0;bottom:0;border-left:2px dashed rgba(255,255,255,.5)}
+  .bextra small{position:absolute;top:-2px;left:4px;font-size:9px;color:var(--muted);white-space:nowrap}
+ 
   .rules li{list-style:none;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.08);display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--txt)}
   .rules li:last-child{border-bottom:none}
   .rules .ic{flex:0 0 auto;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:800}
@@ -65,59 +67,57 @@
   .ic.gate{background:rgba(242,193,78,.18);color:var(--acc)}
   .ic.ok{background:rgba(74,222,128,.18);color:var(--good)}
   .rules small{color:var(--muted)}
-
+ 
   .coordhead{display:flex;align-items:center;gap:14px;margin-bottom:14px}
   .coordhead .big{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#46c2cb,#8b7cf6);display:grid;place-items:center;font-size:20px;font-weight:800;color:#13122a}
   .coordhead .t1{font-size:18px;font-weight:800}
   .coordhead .t2{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-  .coordmetrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .coordmetrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px}
   .cm{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px}
   .cm .l{font-size:11px;color:var(--muted);text-transform:uppercase}
   .cm .v{font-size:20px;font-weight:800;margin-top:4px}
-
-  .calc-row{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-  .calc-row label{font-size:12px;color:var(--muted)}
-  .calc-row input,.calc-row select{background:var(--bg2);border:1px solid var(--line);color:var(--txt);padding:10px 12px;border-radius:9px;font-size:14px}
-  .calc-out{background:linear-gradient(135deg,var(--card2),#332f73);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;margin-top:6px}
-  .calc-out .ov{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-  .calc-out .pv{font-size:30px;font-weight:800;color:var(--acc)}
-  .calc-out .pq{font-size:12px;margin-top:6px}
-  .calc-out.no .pv{color:var(--bad)}
-
+ 
+  .note-box{background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--txt);margin-bottom:16px;line-height:1.6}
+  .note-box b{color:var(--acc)}
+ 
   footer{color:var(--muted);font-size:11px;text-align:center;margin-top:24px;line-height:1.6}
-  @media(max-width:900px){.kpis{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}
+  @media(max-width:900px){.kpis{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.coordmetrics{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
+ 
   <header class="top">
     <div>
       <h1>Premiação <span>Junho / 2026</span></h1>
-      <div class="sub">Cotação · Hospitalar — Meta Mensal de Vendas</div>
+      <div class="sub">Cotação · Hospitalar — Metas Semanais &amp; Objetivo Mensal</div>
     </div>
     <div class="badge">
-      <div class="b1">REGRA DE CORTE</div>
-      <div class="b2">Mínimo 70% da meta</div>
+      <div class="b1">PRÊMIO</div>
+      <div class="b2">R$ 250 + R$ 250 / semana</div>
     </div>
   </header>
-
+ 
+  <div class="note-box">
+    <b>Como funciona:</b> a premiação é <b>semanal</b> — cada vendedor ganha <b>R$ 250</b> ao bater a meta da semana e <b>+ R$ 250</b> ao atingir a meta extra (até R$ 500 por semana). A <b>meta mensal</b> é a <b>soma das metas semanais</b> e funciona como o <b>objetivo</b> do mês.
+  </div>
+ 
   <!-- KPIs -->
   <section class="kpis">
     <div class="kpi a">
-      <div class="lbl">Desafio Global (1º)</div>
+      <div class="lbl">Objetivo Mensal (equipe)</div>
       <div class="val">R$ 1.000.000</div>
-      <div class="note">Meta da área (coordenação)</div>
+      <div class="note">Soma das metas semanais (×4)</div>
     </div>
     <div class="kpi b">
-      <div class="lbl">Superação (Máximo)</div>
-      <div class="val">R$ 1.200.000</div>
-      <div class="note">+20% acima do desafio</div>
+      <div class="lbl">Meta Semanal (equipe)</div>
+      <div class="val">R$ 250.000</div>
+      <div class="note">Extra: R$ 300.000</div>
     </div>
     <div class="kpi c">
-      <div class="lbl">Mínimo p/ Premiar</div>
-      <div class="val">70%</div>
-      <div class="note">Abaixo disso: sem prêmio</div>
+      <div class="lbl">Prêmio por vendedor / semana</div>
+      <div class="val">até R$ 500</div>
+      <div class="note">R$ 250 meta + R$ 250 extra</div>
     </div>
     <div class="kpi d">
       <div class="lbl">Equipe</div>
@@ -125,23 +125,73 @@
       <div class="note">3 vendedores · 1 coordenador</div>
     </div>
   </section>
-
-  <!-- COORDENADOR (Marcus) -->
+ 
+  <!-- Premiação semanal -->
+  <section class="panel" style="margin-bottom:16px">
+    <h2><span class="dot"></span>Premiação Semanal por Vendedor</h2>
+    <table>
+      <thead><tr>
+        <th>Vendedor</th>
+        <th class="r">Meta semana</th>
+        <th class="r">Bateu = <span class="chip g">R$ 250</span></th>
+        <th class="r">Meta extra</th>
+        <th class="r">Extra = <span class="chip t">+R$ 250</span></th>
+        <th class="r">Total / semana</th>
+        <th class="r">Potencial mês (×4)</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="av" style="background:#f2c14e">P</span>Patricia</td><td class="r">100.000</td><td class="r prize">250</td><td class="r">120.000</td><td class="r prize2">250</td><td class="r"><b>500</b></td><td class="r prize">2.000</td></tr>
+        <tr><td><span class="av" style="background:#46c2cb">I</span>Isabel</td><td class="r">50.000</td><td class="r prize">250</td><td class="r">60.000</td><td class="r prize2">250</td><td class="r"><b>500</b></td><td class="r prize">2.000</td></tr>
+        <tr><td><span class="av" style="background:#8b7cf6">H</span>Hiasmin</td><td class="r">50.000</td><td class="r prize">250</td><td class="r">60.000</td><td class="r prize2">250</td><td class="r"><b>500</b></td><td class="r prize">2.000</td></tr>
+        <tr><td><span class="av" style="background:#f472b6">M</span>Marcus <small style="color:var(--muted)">(coord.)</small></td><td class="r">50.000</td><td class="r prize">250</td><td class="r">60.000</td><td class="r prize2">250</td><td class="r"><b>500</b></td><td class="r prize">2.000</td></tr>
+      </tbody>
+      <tfoot><tr><td>TOTAL EQUIPE</td><td class="r">250.000</td><td class="r">1.000</td><td class="r">300.000</td><td class="r">1.000</td><td class="r">2.000</td><td class="r">8.000</td></tr></tfoot>
+    </table>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px">Considerando um mês de 4 semanas. O prêmio é pago por semana atingida.</p>
+  </section>
+ 
+  <!-- Metas semanais vs objetivo mensal -->
+  <section class="grid">
+    <div class="panel">
+      <h2><span class="dot"></span>Meta Semanal → Extra (por vendedor)</h2>
+      <div class="barchart">
+        <div class="brow"><div class="bname">Patricia</div><div class="btrack"><div class="bfill" style="width:83%;background:linear-gradient(90deg,#FFE69A,#f2c14e)"><span>100k</span></div><div class="bextra" style="left:100%"><small>extra 120k</small></div></div></div>
+        <div class="brow"><div class="bname">Isabel</div><div class="btrack"><div class="bfill" style="width:42%;background:linear-gradient(90deg,#9EE7E5,#46c2cb)"><span>50k</span></div><div class="bextra" style="left:50%"><small>extra 60k</small></div></div></div>
+        <div class="brow"><div class="bname">Hiasmin</div><div class="btrack"><div class="bfill" style="width:42%;background:linear-gradient(90deg,#C9B6F5,#8b7cf6)"><span>50k</span></div><div class="bextra" style="left:50%"><small>extra 60k</small></div></div></div>
+        <div class="brow"><div class="bname">Marcus</div><div class="btrack"><div class="bfill" style="width:42%;background:linear-gradient(90deg,#FFB3C9,#f472b6)"><span>50k</span></div><div class="bextra" style="left:50%"><small>extra 60k</small></div></div></div>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:14px">Linha tracejada = meta extra (gatilho do 2º prêmio de R$ 250). Escala relativa à maior meta extra (Patricia, 120k).</p>
+    </div>
+ 
+    <div class="panel">
+      <h2><span class="dot"></span>Objetivo Mensal = Soma das Semanais</h2>
+      <table>
+        <thead><tr><th>Vendedor</th><th class="r">Semanal</th><th class="r">× 4</th><th class="r">Mensal</th></tr></thead>
+        <tbody>
+          <tr><td>Patricia</td><td class="r">100.000</td><td class="r" style="color:var(--muted)">4</td><td class="r"><b>400.000</b></td></tr>
+          <tr><td>Isabel</td><td class="r">50.000</td><td class="r" style="color:var(--muted)">4</td><td class="r"><b>200.000</b></td></tr>
+          <tr><td>Hiasmin</td><td class="r">50.000</td><td class="r" style="color:var(--muted)">4</td><td class="r"><b>200.000</b></td></tr>
+          <tr><td>Marcus</td><td class="r">50.000</td><td class="r" style="color:var(--muted)">4</td><td class="r"><b>200.000</b></td></tr>
+        </tbody>
+        <tfoot><tr><td>OBJETIVO EQUIPE</td><td class="r">250.000</td><td class="r"></td><td class="r">1.000.000</td></tr></tfoot>
+      </table>
+      <p style="font-size:12px;color:var(--muted);margin-top:10px">A meta mensal é o objetivo do mês; o prêmio em dinheiro vem das semanas batidas.</p>
+    </div>
+  </section>
+ 
+  <!-- COORDENADOR -->
   <section class="panel coord" style="margin-bottom:16px">
     <div class="coordhead">
       <div class="big">M</div>
       <div>
         <div class="t1">Marcus — Coordenador da Área</div>
-        <div class="t2">Meta individual R$ 200.000 + Venda Global (Desafio &amp; Superação)</div>
+        <div class="t2">Bônus de venda global · além das metas semanais</div>
       </div>
     </div>
-    <div class="coordmetrics" style="grid-template-columns:1fr 1fr 1fr">
+    <div class="coordmetrics">
       <div class="cm"><div class="l">Desafio (meta global)</div><div class="v">R$ 1.000.000</div></div>
       <div class="cm"><div class="l">Superação (máximo)</div><div class="v">R$ 1.200.000</div></div>
-      <div class="cm" style="border-color:var(--acc)"><div class="l" style="color:var(--acc)">Gatilho — mín. 70% global</div><div class="v" style="color:var(--acc)">R$ 700.000</div></div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--acc2);border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:var(--txt)">
-      <b style="color:var(--acc2)">Gatilhos do coordenador:</b> atingir no mínimo <b>70% da venda global (R$ 700.000)</b> para habilitar a premiação. Acima disso, o prêmio segue a <b>calculadora de rentabilidade</b> — Prêmio = venda global realizada × % do prêmio (0,5% / 0,75% / 1% conforme a faixa de rentabilidade). Esta premiação é <b>adicional</b> à da sua meta individual de R$ 200.000.
+      <div class="cm" style="border-color:var(--acc)"><div class="l" style="color:var(--acc)">Gatilho — mín. 70%</div><div class="v" style="color:var(--acc)">R$ 700.000</div></div>
     </div>
     <table>
       <thead><tr>
@@ -155,89 +205,9 @@
         <tr><td>Superação atingida</td><td class="r">1.200.000</td><td class="r prize">6.000</td><td class="r prize">9.000</td><td class="r prize">12.000</td></tr>
       </tbody>
     </table>
-    <p style="font-size:12px;color:var(--muted);margin-top:10px">Prêmio do coordenador = <b>Venda global realizada × % do prêmio</b> (faixa de rentabilidade). Mínimo de 70% do desafio (R$ 700.000) para habilitar.</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px">Bônus do coordenador = <b>venda global × % do prêmio</b> (faixa de rentabilidade), com gatilho mínimo de 70% (R$ 700.000). É adicional às metas semanais individuais.</p>
   </section>
-
-  <!-- VENDEDORES -->
-  <section class="grid">
-    <div class="panel">
-      <h2><span class="dot"></span>Metas dos Vendedores</h2>
-      <div class="barchart">
-        <div class="brow"><div class="bname">Patricia</div><div class="btrack"><div class="bfill" style="width:100%;background:#f2c14e"><span>R$ 400.000</span></div></div></div>
-        <div class="brow"><div class="bname">Isabel</div><div class="btrack"><div class="bfill" style="width:50%;background:#46c2cb"><span>R$ 200.000</span></div></div></div>
-        <div class="brow"><div class="bname">Hiasmin</div><div class="btrack"><div class="bfill" style="width:50%;background:#8b7cf6"><span>R$ 200.000</span></div></div></div>
-        <div class="brow"><div class="bname">Marcus</div><div class="btrack"><div class="bfill" style="width:50%;background:#f472b6"><span>R$ 200.000</span></div></div></div>
-      </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:14px">Total individual: <b style="color:var(--acc)">R$ 1.000.000</b> · Marcus tem meta individual de R$ 200.000 <b>além</b> da coordenação global.</p>
-    </div>
-    <div class="panel">
-      <h2><span class="dot"></span>Quadro de Vendedores</h2>
-      <table>
-        <thead><tr><th>Vendedor</th><th class="r">Meta (R$)</th><th class="r">Mín. 70%</th></tr></thead>
-        <tbody>
-          <tr><td><span class="av" style="background:#f2c14e">P</span>Patricia</td><td class="r">400.000</td><td class="r">280.000</td></tr>
-          <tr><td><span class="av" style="background:#46c2cb">I</span>Isabel</td><td class="r">200.000</td><td class="r">140.000</td></tr>
-          <tr><td><span class="av" style="background:#8b7cf6">H</span>Hiasmin</td><td class="r">200.000</td><td class="r">140.000</td></tr>
-          <tr><td><span class="av" style="background:#f472b6">M</span>Marcus <small style="color:var(--muted)">(coord.)</small></td><td class="r">200.000</td><td class="r">140.000</td></tr>
-        </tbody>
-        <tfoot><tr><td>TOTAL INDIVIDUAL</td><td class="r">1.000.000</td><td class="r">700.000</td></tr></tfoot>
-      </table>
-    </div>
-  </section>
-
-  <!-- Premiação potencial vendedores + calculadora -->
-  <section class="grid">
-    <div class="panel">
-      <h2><span class="dot"></span>Prêmio Potencial dos Vendedores (meta 100%)</h2>
-      <table>
-        <thead><tr>
-          <th>Vendedor</th><th class="r">Meta</th>
-          <th class="r"><span class="chip y">0,5%</span></th>
-          <th class="r"><span class="chip t">0,75%</span></th>
-          <th class="r"><span class="chip g">1%</span></th>
-        </tr></thead>
-        <tbody>
-          <tr><td>Patricia</td><td class="r">400.000</td><td class="r prize">2.000</td><td class="r prize">3.000</td><td class="r prize">4.000</td></tr>
-          <tr><td>Isabel</td><td class="r">200.000</td><td class="r prize">1.000</td><td class="r prize">1.500</td><td class="r prize">2.000</td></tr>
-          <tr><td>Hiasmin</td><td class="r">200.000</td><td class="r prize">1.000</td><td class="r prize">1.500</td><td class="r prize">2.000</td></tr>
-          <tr><td>Marcus <small style="color:var(--muted)">(individual)</small></td><td class="r">200.000</td><td class="r prize">1.000</td><td class="r prize">1.500</td><td class="r prize">2.000</td></tr>
-        </tbody>
-        <tfoot><tr><td>TOTAL</td><td class="r">1.000.000</td><td class="r">5.000</td><td class="r">7.500</td><td class="r">10.000</td></tr></tfoot>
-      </table>
-      <p style="font-size:12px;color:var(--muted);margin-top:10px">Fórmula: <b>Prêmio = Realizado × % do prêmio</b>, definido pela faixa de rentabilidade.</p>
-    </div>
-
-    <div class="panel">
-      <h2><span class="dot"></span>Calculadora de Premiação</h2>
-      <div class="calc-row">
-        <label>Perfil</label>
-        <select id="cVend">
-          <option value="400000">Patricia — vendedora · R$ 400.000</option>
-          <option value="200000">Isabel — vendedora · R$ 200.000</option>
-          <option value="200000">Hiasmin — vendedora · R$ 200.000</option>
-          <option value="1000000">Marcus — coordenador · R$ 1.000.000 (global)</option>
-        </select>
-      </div>
-      <div class="calc-row">
-        <label>% atingido da meta</label>
-        <input id="cPct" type="number" value="100" min="0" max="200" step="1">
-      </div>
-      <div class="calc-row">
-        <label>Faixa de rentabilidade</label>
-        <select id="cFaixa">
-          <option value="0.005" data-r="35">Rentabilidade ≥ 35% → prêmio 0,5%</option>
-          <option value="0.0075" data-r="37,5">Rentabilidade ≥ 37,5% → prêmio 0,75%</option>
-          <option value="0.01" data-r="40">Rentabilidade ≥ 40% → prêmio 1%</option>
-        </select>
-      </div>
-      <div id="calcOut" class="calc-out">
-        <div class="ov">Prêmio estimado</div>
-        <div class="pv" id="cPremio">R$ 2.000</div>
-        <div class="pq" id="cQuali">Acima do mínimo de 70% — habilitado ✔</div>
-      </div>
-    </div>
-  </section>
-
+ 
   <!-- Deduções, gatilhos -->
   <section class="grid">
     <div class="panel">
@@ -249,44 +219,19 @@
       </ul>
     </div>
     <div class="panel">
-      <h2><span class="dot"></span>Gatilhos &amp; Regras</h2>
+      <h2><span class="dot"></span>Regras da Premiação</h2>
       <ul class="rules">
-        <li><span class="ic gate">!</span><div><b>Mínimo 70%</b><br><small>Abaixo do mínimo não há premiação</small></div></li>
-        <li><span class="ic ok">✓</span><div><b>Gatilho de satisfação: 70%</b><br><small>Índice mínimo para liberar o prêmio</small></div></li>
-        <li><span class="ic gate">%</span><div><b>Base: rentabilidade</b><br><small>O % do prêmio segue a faixa atingida (0,5% / 0,75% / 1%)</small></div></li>
+        <li><span class="ic ok">✓</span><div><b>Prêmio semanal</b><br><small>R$ 250 ao bater a meta da semana</small></div></li>
+        <li><span class="ic ok">✓</span><div><b>Prêmio extra</b><br><small>+R$ 250 ao atingir a meta extra da semana</small></div></li>
+        <li><span class="ic gate">★</span><div><b>Meta mensal = objetivo</b><br><small>Soma das semanais; orienta o ritmo do mês</small></div></li>
       </ul>
     </div>
   </section>
-
+ 
   <footer>
-    Dashboard reconstruído a partir da anotação "Premiação Maio/2026 — Cotação / Hospitalar".<br>
-    <b>Vendedores</b> (Patricia, Isabel, Hiasmin) premiados pela meta individual · <b>Marcus (coordenador)</b> pela venda global atrelada ao desafio R$ 1M / superação R$ 1,2M.<br>
-    Em todos os casos: <b>Prêmio = Realizado × % do prêmio</b> (faixa de rentabilidade), gatilho mínimo de 70% e deduções de frete, devoluções e desconto residual.
+    Premiação Maio/2026 — Cotação · Hospitalar.<br>
+    Prêmio semanal: <b>R$ 250</b> (meta) + <b>R$ 250</b> (extra) por vendedor · Meta mensal = soma das semanais (objetivo) · Marcus (coordenador) tem bônus global adicional pela rentabilidade.
   </footer>
 </div>
-
-<script>
-const fmt = n => "R$ " + n.toLocaleString("pt-BR",{maximumFractionDigits:0});
-
-const cVend=document.getElementById('cVend'),cPct=document.getElementById('cPct'),
-      cFaixa=document.getElementById('cFaixa'),cPremio=document.getElementById('cPremio'),
-      cQuali=document.getElementById('cQuali'),calcOut=document.getElementById('calcOut');
-function calc(){
-  const meta=+cVend.value||0, perc=+cFaixa.value, pct=+cPct.value||0;
-  const realizado=meta*pct/100;
-  if(pct<70){
-    calcOut.classList.add('no');
-    cPremio.textContent='R$ 0';
-    cQuali.textContent='Abaixo do mínimo de 70% — sem premiação ✖';
-  }else{
-    calcOut.classList.remove('no');
-    cPremio.textContent=fmt(realizado*perc);
-    const r=cFaixa.options[cFaixa.selectedIndex].dataset.r;
-    cQuali.textContent='Rentab. ≥ '+r+'% · '+(perc*100).toLocaleString('pt-BR')+'% sobre '+fmt(realizado)+' realizado ✔';
-  }
-}
-[cVend,cPct,cFaixa].forEach(e=>e.addEventListener('input',calc));
-calc();
-</script>
 </body>
 </html>
